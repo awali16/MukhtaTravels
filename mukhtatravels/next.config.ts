@@ -1,11 +1,14 @@
 import type { NextConfig } from "next";
-import withFlowbiteReact from "flowbite-react/plugin/nextjs";
 
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ['www.adaptivewfs.com'],
+    remotePatterns: [{
+      protocol: 'https',
+      hostname: 'www.adaptivewfs.com',
+      pathname: '**', // allow all images from this domain
+    }],
   },
 };
 
-export default withFlowbiteReact(nextConfig);
+export default nextConfig;
