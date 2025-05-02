@@ -6,8 +6,13 @@ const nextConfig: NextConfig = {
     remotePatterns: [{
       protocol: 'https',
       hostname: 'www.adaptivewfs.com',
-      pathname: '**', // allow all images from this domain
-    }],
+      pathname: '**',
+    },
+    {
+      protocol: 'https',
+      hostname: 'img.icons8.com',
+      pathname: '**',
+    },],
   },
 };
 
