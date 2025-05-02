@@ -30,7 +30,7 @@ const Header: React.FC = () => {
                         alt=''
                         width={80}
                         height={80} />
-                    <h1 className="logo text-lg">Mukhta Travels</h1>
+                    <h1 className="logo text-lg">Mukhta Solutions</h1>
                 </Link>
             </div>
             <nav className="nav hidden lg:flex  items-center justify-center w-full">
