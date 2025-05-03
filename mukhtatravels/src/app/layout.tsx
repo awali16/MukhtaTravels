@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../Components/Header";
+import Draggable from 'react-draggable';
+import WhatsAppButton from "../Components/WhatsAppButton";
 
 
 const geistSans = Geist({
@@ -29,10 +31,12 @@ export default function RootLayout({
       <head>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
         <Header/>
+
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );
