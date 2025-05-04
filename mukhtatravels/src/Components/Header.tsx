@@ -11,14 +11,18 @@ import { NavigationMenu } from '@/lib/constants';
 const Header: React.FC = () => {
     const pathname = usePathname();
     const [showMenu, setShowMenu] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     const HandleShowMenu = () => {
         setShowMenu(!showMenu);
     };
-
+    
     useEffect(() => {
-        setShowMenu(false);
+        setMounted(true);
+       
     }, [pathname]);
+
+    if (!mounted) return null;
 
     return (
         <>
@@ -45,14 +49,15 @@ const Header: React.FC = () => {
                 </div>
                 <nav className="nav hidden lg:flex  items-center justify-center w-full">
                     <ul className='flex items-center justify-start gap-8'>
-                        {NavigationMenu.map((item, index) => (
-                            <Link href={item.href} key={index} className="relative group">
+                        {NavigationMenu.map((item, index) => {
+                            return <Link href={item.href} key={index} className="relative group">
                                 <li>
                                     {item.name}
-                                    <span className="absolute left-1/2 -bottom-0.5 w-0 h-[2px] bg-white transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 mt-2"></span>
+                                    <span className={`absolute  -bottom-0.5  h-[2px] bg-white transition-all duration-300 ease-in-out  mt-2 ${pathname === item.href ? "w-full left-0" : "left-1/2 w-0 group-hover:w-full group-hover:left-0"}`}></span>
                                 </li>
                             </Link>
-                        ))}
+                        }
+                        )}
 
                     </ul>
                 </nav>
@@ -66,13 +71,13 @@ const Header: React.FC = () => {
                 </div>
 
                 <div className={`fixed top-0 right-0 h-screen w-full z-50 lg:hidden
-                ${showMenu ? 'bg-opacity-25 backdrop-blur-sm' : 'bg-opacity-0 backdrop-blur-none'}
+                ${showMenu ? 'opacity-[.75] backdrop-blur-sm' : 'bg-opacity-0 backdrop-blur-none'}
                 transition-transform duration-500
                 ${showMenu ? 'translate-x-0' : 'translate-x-full'}`}
                     onClick={() => setShowMenu(false)}
                 >
                     <div
-                        className="relative h-full w-[65%] bg-green-600 ml-auto py-16 px-4 transition-transform duration-300"
+                        className="relative h-full w-[65%] bg-green-600 opacity-100 ml-auto py-16 px-4 transition-transform duration-300"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className='absolute top-4 right-4' onClick={HandleShowMenu}>
@@ -91,18 +96,19 @@ const Header: React.FC = () => {
                             </div>
                         </div>
                         <ul className="flex flex-col items-center justify-center gap-4 text-white">
-                            {NavigationMenu.map((item, index) => (
-                                <Link href={item.href} key={index} className="relative group">
+                            {NavigationMenu.map((item, index) => {
+                                return<Link href={item.href} key={index} className="relative group">
+                                    
                                     <li>
                                         {item.name}
-                                        <span className="absolute left-1/2 -bottom-0.5 w-0 h-[2px] bg-white transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 mt-2"></span>
+                                        <span className={`absolute  -bottom-0.5  h-[2px] bg-white transition-all duration-300 ease-in-out  mt-2 ${pathname === item.href ? "w-full left-0" : "left-1/2 w-0 group-hover:w-full group-hover:left-0"}`}></span>
                                     </li>
                                 </Link>
-                            ))}
+                            }
+                            )}
                         </ul>
                     </div>
                 </div>
-
             </header>
         </>
     );
