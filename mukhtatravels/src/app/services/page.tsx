@@ -20,12 +20,12 @@ export default function ServicePage() {
                     {OurServices.map((service, index) => (
 
                         <div className="p-4 py-8 flex flex-col text-center items-center  border-2 border-yellow-600 rounded-lg w-fit" key={index}>
-                            <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                            <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-blue-100 text-indigo-500 mb-5 flex-shrink-0">
                                 <Image src={service.img} alt={`${service.title}-icons`} height={40} width={40}></Image>
                             </div>
                             <div className="flex-grow">
-                                <h2 className="text-gray-900 text-xl title-font font-bold mb-3">{service.title}</h2>
-                                <p className="leading-relaxed text-base">{service.description}</p>
+                                <h2 className="text-gray-900 text-xl font-bold mb-3 ">{service.title}</h2>
+                                <p className="leading-relaxed text-base text-center">{service.description}</p>
                             </div>
                         </div>
                     ))}
