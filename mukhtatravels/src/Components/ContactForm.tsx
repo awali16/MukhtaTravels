@@ -25,7 +25,6 @@ const ContactForm: React.FC = () => {
     } = useForm<FormValues>();
     const phone = watch("phone");
     const today = new Date();
-    const formattedToday = format(today, "dd-MM-yyyy");
     const fromDate = watch("fromDate");
 
     const onSubmit = (data: FormValues) => {
