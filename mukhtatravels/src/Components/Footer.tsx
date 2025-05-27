@@ -13,10 +13,26 @@ const Footer: React.FC = () => {
                 <div>
                     <h3 className="text-xl font-semibold mb-4">Navigation</h3>
                     <ul className="space-y-2">
-                        <li><a href="/" className="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="/services" className="text-gray-400 hover:text-white transition">Services</a></li>
-                        <li><a href="/about" className="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="/contact" className="text-gray-400 hover:text-white transition">Contact</a></li>
+                        <li>
+                            <Link href="/" className="text-gray-400 hover:text-white transition">
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/services" className="text-gray-400 hover:text-white transition">
+                                Services
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/about" className="text-gray-400 hover:text-white transition">
+                                About Us
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/contact" className="text-gray-400 hover:text-white transition">
+                                Contact
+                            </Link>
+                        </li>
                     </ul>
                 </div>
 
@@ -55,7 +71,7 @@ const Footer: React.FC = () => {
                 <div className="w-64  text-center  flex flex-col items-start justify-start">
                     <div className="flex title-font font-medium items-center md:justify-start  text-white-900">
                         <Image src={"/MukhtaSolutionsLogo.jpeg"} width={30} height={30} alt='logo' className="w-16 h-16 text-white p-2  rounded-full" />
-                        
+
                     </div>
                     <p className="ml-2 text-xl">Mukhta Solutions</p>
                     <p className="ml-2 mt-2 text-sm text-gray-500 ">Your Gateway to Kashmir</p>
