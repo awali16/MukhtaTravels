@@ -3,24 +3,23 @@
 import { useEffect, useState } from 'react';
 
 const GOOGLE_PLACE_ID = 'ChIJuYtvsKOF4TgRc4xWnLhBKuE'; // replace with your actual place ID
-const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
 export default function ReviewsSection() {
   const [googleReviews, setGoogleReviews] = useState([]);
   const [localReview, setLocalReview] = useState('');
 
+  const [reviews, setReviews] = useState([]);
+
   useEffect(() => {
-    async function fetchGoogleReviews() {
-      console.log("started fetching reviews");
-      const res = await fetch(
-        `https://maps.googleapis.com/maps/api/place/details/json?placeid=${GOOGLE_PLACE_ID}&fields=reviews&key=${GOOGLE_API_KEY}`
-      );
+    const fetchReviews = async () => {
+      const res = await fetch(`/api/googleReviews?placeId=${GOOGLE_PLACE_ID}`);
       console.log(res, "res");
       const data = await res.json();
-      setGoogleReviews(data.result?.reviews || []);
-    }
+      console.log(data, "data");
+      setReviews(data.result?.reviews || []);
+    };
 
-    fetchGoogleReviews();
+    fetchReviews();
   }, []);
 
   const handleReviewSubmit = (e: React.FormEvent) => {
