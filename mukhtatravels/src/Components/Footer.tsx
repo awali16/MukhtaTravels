@@ -1,5 +1,6 @@
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
@@ -23,39 +24,39 @@ const Footer: React.FC = () => {
                 <div>
                     <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
                     <div className="flex space-x-6 text-xl">
-                        <a
+                        <Link
                             href="https://facebook.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-400 hover:text-white transition"
                         >
                             <FaFacebookF />
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href="https://twitter.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-400 hover:text-white transition"
                         >
                             <FaTwitter />
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href="https://instagram.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-400 hover:text-white transition"
                         >
                             <FaInstagram />
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
                 {/* <!-- Social Media Logos --> */}
                 <div className="w-64  text-center  flex flex-col items-start justify-start">
-                    <a className="flex title-font font-medium items-center md:justify-start  text-white-900">
+                    <div className="flex title-font font-medium items-center md:justify-start  text-white-900">
                         <Image src={"/MukhtaSolutionsLogo.jpeg"} width={30} height={30} alt='logo' className="w-16 h-16 text-white p-2  rounded-full" />
                         
-                    </a>
+                    </div>
                     <p className="ml-2 text-xl">Mukhta Solutions</p>
                     <p className="ml-2 mt-2 text-sm text-gray-500 ">Your Gateway to Kashmir</p>
                 </div>
@@ -66,14 +67,14 @@ const Footer: React.FC = () => {
                     </div>
                     <div>
                         <p>&nbsp;Designed & Developed by {" "}
-                            <a
+                            <Link
                                 href="https://asifwali.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-pink-500 hover:underline"
                             >
                                 Mohammad Asif
-                            </a></p>
+                            </Link></p>
                     </div>
 
                 </div>

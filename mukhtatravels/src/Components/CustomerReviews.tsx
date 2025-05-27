@@ -5,10 +5,9 @@ import { useEffect, useState } from 'react';
 const GOOGLE_PLACE_ID = 'ChIJuYtvsKOF4TgRc4xWnLhBKuE'; // replace with your actual place ID
 
 export default function ReviewsSection() {
-  const [googleReviews, setGoogleReviews] = useState([]);
+ 
   const [localReview, setLocalReview] = useState('');
 
-  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -16,7 +15,7 @@ export default function ReviewsSection() {
       console.log(res, "res");
       const data = await res.json();
       console.log(data, "data");
-      setReviews(data.result?.reviews || []);
+      // setReviews(data.result?.reviews || []);
     };
 
     fetchReviews();

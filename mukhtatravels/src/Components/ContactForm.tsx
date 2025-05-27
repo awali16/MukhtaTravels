@@ -5,7 +5,6 @@ import 'react-phone-number-input/style.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format, parse, startOfDay } from "date-fns";
-import Image from "next/image";
 
 type FormValues = {
     name: string;
