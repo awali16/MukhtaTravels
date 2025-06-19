@@ -44,34 +44,34 @@ export default function OurCustomerExperiences() {
     ],
      // 👈 to apply our custom styling
   };
-  const otherCarousel = {
-    infinite: true,
-    speed: 400,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-    ],
-  };
+  // const otherCarousel = {
+  //   infinite: true,
+  //   speed: 400,
+  //   slidesToShow: 6,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 4000,
+  //   responsive: [
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 3,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 4,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //       },
+  //     },
+  //   ],
+  // };
 
 
 
