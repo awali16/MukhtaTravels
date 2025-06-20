@@ -1,12 +1,9 @@
-
 export const NavigationMenu = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
   { name: "Services", href: "/services" },
- 
 ];
-
 
 export const OurServices = [
   {
@@ -58,5 +55,3 @@ export const OurServices = [
       "Dedicated assistance throughout your trip to ensure a worry-free travel experience.",
   },
 ];
-
-

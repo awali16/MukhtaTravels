@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -42,7 +42,7 @@ export default function OurCustomerExperiences() {
         },
       },
     ],
-     // 👈 to apply our custom styling
+    // 👈 to apply our custom styling
   };
   // const otherCarousel = {
   //   infinite: true,
@@ -73,10 +73,6 @@ export default function OurCustomerExperiences() {
   //   ],
   // };
 
-
-
-
-
   return (
     <section className="py-12 px-4 sm:px-8 md:px-16 lg:px-24 bg-gray-50">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10">
@@ -94,7 +90,7 @@ export default function OurCustomerExperiences() {
                   alt={`Customer Review ${index + 1}`}
                   className="object-cover"
                 />
-                <div className='text-lg font-bold'>{index+1}</div>
+                <div className="text-lg font-bold">{index + 1}</div>
               </div>
             </div>
           </div>

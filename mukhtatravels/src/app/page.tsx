@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Hero from "@/Components/Hero";
 import dynamic from "next/dynamic";
@@ -10,16 +10,14 @@ const DynamicContactForm = dynamic(() => import("@/Components/ContactForm"), {
   ssr: false, // Disable SSR for this component
 });
 
-
 export default function Home() {
   return (
     <>
-      <Hero/>
-      <DynamicContactForm/>
-      <OurPackages/>
-      <OurCustomerExperiences/>
+      <Hero />
+      <DynamicContactForm />
+      <OurPackages />
+      <OurCustomerExperiences />
       {/* <CustomerReviews/> */}
-
     </>
   );
 }

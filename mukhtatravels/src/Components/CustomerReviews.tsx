@@ -1,13 +1,11 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-const GOOGLE_PLACE_ID = 'ChIJuYtvsKOF4TgRc4xWnLhBKuE'; // replace with your actual place ID
+const GOOGLE_PLACE_ID = "ChIJuYtvsKOF4TgRc4xWnLhBKuE"; // replace with your actual place ID
 
 export default function ReviewsSection() {
- 
-  const [localReview, setLocalReview] = useState('');
-
+  const [localReview, setLocalReview] = useState("");
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -23,10 +21,10 @@ export default function ReviewsSection() {
 
   const handleReviewSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('You will be redirected to Google to post your review');
+    alert("You will be redirected to Google to post your review");
     window.open(
       `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`,
-      '_blank'
+      "_blank"
     );
   };
 

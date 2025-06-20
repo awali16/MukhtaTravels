@@ -5,7 +5,7 @@ export default function Loading() {
       <div className="h-[calc(100vh-7rem)]  flex items-center justify-center px-4 mx-auto">
         <div className="flex flex-wrap items-center gap-4">
           <div>
-          <svg
+            <svg
               width="48"
               height="49"
               viewBox="0 0 48 49"

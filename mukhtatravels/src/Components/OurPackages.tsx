@@ -64,4 +64,3 @@ const OurPackages: React.FC = () => {
 };
 
 export default OurPackages;
-

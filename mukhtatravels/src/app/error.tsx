@@ -1,7 +1,7 @@
 // app/dashboard/error.tsx
-'use client';
+"use client";
 
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 interface ErrorProps {
   error: Error;
@@ -10,7 +10,7 @@ interface ErrorProps {
 
 export default function ErrorBoundary({ error, reset }: ErrorProps) {
   useEffect(() => {
-    console.error('Route error:', error);
+    console.error("Route error:", error);
   }, [error]);
 
   return (

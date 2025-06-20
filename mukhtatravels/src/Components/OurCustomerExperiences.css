@@ -15,7 +15,7 @@
   flex-wrap: nowrap !important;
   overflow-x: auto;
   justify-content: center;
-  padding: 0.5rem 20px;  
+  padding: 0.5rem 20px;
   bottom: -35px;
   scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
@@ -30,9 +30,7 @@
   color: #3b82f6;
 }
 
-
 /* Optional: active dot style */
 .custom-dots li.slick-active button:before {
-   color: #22c55e;;
+  color: #22c55e;
 }
-
