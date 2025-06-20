@@ -4,9 +4,9 @@ import React from "react";
 
 export default function ServicePage() {
   return (
-    <main className="px-6">
+    <main className="px-6 py-16">
       {/* Header */}
-      <div className=" flex flex-col items-center justify-center w-full gap-3 mt-6">
+      <div className=" flex flex-col items-center justify-center w-full gap-3">
         <div className="text-center mb-4">
           <h1 className="text-4xl font-bold text-green-700 mb-3">
             Our Services
