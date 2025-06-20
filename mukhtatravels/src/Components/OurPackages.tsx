@@ -14,7 +14,8 @@ const OurPackages: React.FC = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 768,
@@ -36,7 +37,7 @@ const OurPackages: React.FC = () => {
           <div key={index} className="px-3">
             <div className="rounded-lg overflow-hidden shadow-md bg-white">
               {/* Big image */}
-              <div className="relative w-full h-84">
+              <div className="relative w-full h-96">
                 <Image
                   src={`/OurPackages/${index + 1}.jpeg`}
                   fill
