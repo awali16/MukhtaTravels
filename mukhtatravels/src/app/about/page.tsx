@@ -6,9 +6,11 @@ const AboutPage = () => {
   return (
     <div className="px-6 sm:px-10 lg:px-40 py-16 bg-white text-gray-800">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-green-700 mb-6">
-          About Mukhta Solutions
-        </h1>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-green-700 mb-6">
+            About Mukhta Solutions
+          </h1>
+        </div>
 
         <p className="text-lg mb-4">
           Welcome to <strong>Mukhta Solutions</strong> — your trusted travel

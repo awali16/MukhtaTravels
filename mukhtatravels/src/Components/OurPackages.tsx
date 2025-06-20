@@ -16,6 +16,7 @@ const OurPackages: React.FC = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    arrows:false,
     responsive: [
       {
         breakpoint: 768,
@@ -27,8 +28,8 @@ const OurPackages: React.FC = () => {
   };
 
   return (
-    <section className="py-12 px-4 sm:px-8 md:px-16 lg:px-24 bg-gray-50">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10">
+    <section className="py-12 px-4 sm:px-8 md:px-16 lg:px-24 bg-gray-50 overflow-x-none">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#00a73e] mb-10">
         Our Packages
       </h2>
 
@@ -42,7 +43,7 @@ const OurPackages: React.FC = () => {
                   src={`/OurPackages/${index + 1}.jpeg`}
                   fill
                   alt={`Package ${index + 1}`}
-                  className="object-cover"
+                  className="lg:object-cover object-contain"
                 />
               </div>
 

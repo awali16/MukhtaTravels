@@ -8,7 +8,9 @@ const ContactPage = () => {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-green-700 mb-4">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-green-700 mb-6">
+            Contact Us
+          </h1>
           <p className="text-lg text-gray-600">
             We’d love to hear from you! Whether you’re planning your dream trip
             to Kashmir or simply have questions about our services, the team at

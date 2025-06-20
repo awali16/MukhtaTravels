@@ -1,7 +1,7 @@
 import React from "react";
 const Hero: React.FC = () => {
   return (
-    <div className="relative h-[32rem] bg-[url(/MukhtaSolutionsLogo.jpeg)] bg-auto bg-center bg-no-repeat border-b-4 border-red-500">
+    <div className="relative h-[32rem] bg-[url(/MukhtaSolutionsLogo.jpeg)] bg-auto bg-center bg-no-repeat">
       <section className="absolute inset-0 bg-black opacity-[.80]">
         <div className="container mx-auto flex h-full px-5 py-24 items-center justify-center text-center text-white">
           <div className="lg:w-2/3 w-full">

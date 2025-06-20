@@ -9,10 +9,10 @@ import { NavigationMenu } from "@/lib/constants"; // Adjust the import path as n
 const Footer: React.FC = () => {
   const pathname = usePathname();
   return (
-    <footer className="bg-gray-900 text-white pt-10">
-      <div className=" px-8 sm:px-8 lg:px-44 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-gray-900 text-white pt-10 ">
+      <div className=" px-8 sm:px-8 lg:px-44 grid grid-cols-1 md:grid-cols-3 pb-8 lg:pb-2 gap-8">
         {/* <!-- Navigation Links --> */}
-        <div>
+        <div className="" >
           <h3 className="text-xl font-semibold mb-4">Navigation</h3>
           <ul className="space-y-2">
             {/* Map through NavigationMenu items */}
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* <!-- Social Media Links --> */}
-        <div>
+        <div className="">
           <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
           <div className="flex space-x-6 text-xl">
             <Link
@@ -71,19 +71,18 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* <!-- Social Media Logos --> */}
-        <div className="w-64  text-center  flex flex-col items-start justify-start">
-          <div className="flex title-font font-medium items-center md:justify-start  text-white-900">
+        {/* <!--Company Logos --> */}
+        <div className="w-64  text-center  flex flex-col items-start justify-start ">
+          <div className="relative flex title-font font-medium items-center  justify-start  text-white-900 h-16 w-16 rounded-full overflow-hidden mb-6">
             <Image
               src={"/MukhtaSolutionsLogo.jpeg"}
-              width={30}
-              height={30}
+              fill
               alt="logo"
-              className="w-16 h-16 text-white p-2  rounded-full"
+              className="object-cover"
             />
           </div>
-          <p className="ml-2 text-xl">Mukhta Solutions</p>
-          <p className="ml-2 mt-2 text-sm text-gray-500 ">
+          <p className="text-xl">Mukhta Solutions</p>
+          <p className="mt-2 text-sm text-gray-500 ">
             Your Gateway to Kashmir
           </p>
         </div>

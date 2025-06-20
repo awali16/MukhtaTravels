@@ -39,7 +39,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <section className="py-14 px-4 sm:px-8 md:px-16 lg:px-24 bg-gray-50">
+    <section className="py-14 px-4 sm:px-8 md:px-16 lg:px-24 bg-gray-50 overflow-x-none ">
       <div className=" flex items-center justify-center gap-4">
         <div className="bg-[url(/MukhtaSolutionsLogo.jpeg)] bg-auto bg-center bg-no-repeat h-[36rem] w-[60rem] rounded-lg items-center justify-center hidden lg:flex">
           {/* <Image
@@ -50,7 +50,7 @@ const ContactForm: React.FC = () => {
                 /> */}
         </div>
         <div className=" p-6 bg-white shadow-md rounded-lg">
-          <h2 className="text-2xl font-bold mb-6 text-center">
+          <h2 className="text-2xl font-bold mb-6 text-center text-[#00a73e]">
             Book Your Tour
           </h2>
 
@@ -173,7 +173,7 @@ const ContactForm: React.FC = () => {
                       }
                       dateFormat="dd-MM-yyyy"
                       minDate={today}
-                      className="w-full border px-3 py-2 rounded focus:outline-none focus:border-green-500"
+                      className="w-full border px-3 py-2 rounded focus:focus:outline-[green]"
                     />
                   )}
                 />
@@ -217,7 +217,7 @@ const ContactForm: React.FC = () => {
                           ? parse(fromDate, "dd-MM-yyyy", new Date())
                           : today
                       }
-                      className="w-full border px-3 py-2 rounded focus:outline-none focus:border-green-500"
+                      className="w-full border px-3 py-2 rounded focus:outline-[green]"
                     />
                   )}
                 />
@@ -232,7 +232,7 @@ const ContactForm: React.FC = () => {
             {/* Submit */}
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+              className="w-full bg-[#2c7dff] text-white py-2 rounded hover:bg-blue-700 transition cursor-pointer"
             >
               Submit
             </button>

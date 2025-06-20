@@ -16,6 +16,7 @@ export default function OurCustomerExperiences() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1280, // large screen
@@ -74,8 +75,8 @@ export default function OurCustomerExperiences() {
   // };
 
   return (
-    <section className="py-12 px-4 sm:px-8 md:px-16 lg:px-24 bg-gray-50">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10">
+    <section className="py-12 px-4 sm:px-8 md:px-16 lg:px-24 bg-gray-50 overflow-x-none">
+      <h2 className="xl:text-4xl lg:text-3xl text-2xl font-bold text-center text-[#00a73e] mb-10">
         Our Customer Experiences
       </h2>
 

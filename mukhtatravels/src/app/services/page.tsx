@@ -8,8 +8,13 @@ export default function ServicePage() {
       {/* Header */}
       <div className=" flex flex-col items-center justify-center w-full gap-3 mt-6">
         <div className="text-center mb-4">
-          <h1 className="text-3xl font-bold">Our Services</h1>
-          <p>Mukhta Solutions — Your Gateway to Kashmir</p>
+          <h1 className="text-4xl font-bold text-green-700 mb-3">
+            Our Services
+          </h1>
+
+          <p className="text-[#00a73e]">
+            Mukhta Solutions — Your Gateway to Kashmir
+          </p>
         </div>
       </div>
 

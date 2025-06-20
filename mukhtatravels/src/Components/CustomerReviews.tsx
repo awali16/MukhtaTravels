@@ -29,7 +29,7 @@ export default function ReviewsSection() {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-white shadow-md rounded-lg">
+    <div className="max-w-xl mx-auto p-6 bg-white shadow-md rounded-lg overflow-x-none">
       <h2 className="text-2xl font-bold mb-4">What Our Customers Say</h2>
 
       {/* Google Reviews */}

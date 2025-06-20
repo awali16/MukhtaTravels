@@ -28,7 +28,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <div className="h-8 bg-green-700 text-white flex items-center justify-center gap-6 text-sm px-4">
+      <div className="h-8 bg-[#00a73e] text-white flex items-center justify-center gap-6 text-sm px-4">
         <a href="mailto:mukhtasolutions@gmail.com" className="hover:underline">
           mukhtasolutions@gmail.com
         </a>
@@ -38,7 +38,7 @@ const Header: React.FC = () => {
         </a>
       </div>
 
-      <header className="header  flex items-center justify-center w-full h-20 px-4 bg-blue-500 text-white relative">
+      <header className="header  flex items-center lg:justify-center justify-between w-full h-20 lg:pl-10 px-4 bg-blue-500 text-white relative overflow-x-none">
         <div className="logo flex items-center w-full gap-2">
           <Link href="/" className="flex items-center gap-2">
             <div className="relative h-14 w-14 rounded-full overflow-hidden">
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
                 src={"/MukhtaSolutionsLogo.jpeg"}
                 alt=""
                 fill
-                sizes="(max-width: 768px) 120px, (max-width: 1200px) 150px, 200px"
+                // sizes="(max-width: 768px) 120px, (max-width: 1200px) 150px, 200px"
                 className="rounded-full "
               />
             </div>
@@ -75,9 +75,9 @@ const Header: React.FC = () => {
           </ul>
         </nav>
         {/* this div is a placeholder for alignment of the header items */}
-        <div className="w-full"></div>
-
-        <div className="text-white  lg:hidden" onClick={handleToggleMenu}>
+        <div className="w-full hidden lg:inline-block"></div>
+        {/* Hamburger Menu Icon for Mobile */}
+        <div className="text-white  lg:hidden  cursor-pointer" onClick={handleToggleMenu}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
             />
           </svg>
         </div>
-
+        {/* Mobile Menu drawer */}
         <div
           className={`flex fixed top-0 right-0 h-screen w-full z-50 lg:hidden 
             transition-transform duration-500
@@ -109,7 +109,7 @@ const Header: React.FC = () => {
           ></div>
 
           <div className="relative h-full w-[65%] bg-green-600 opacity-100 ml-auto py-16 px-4 transition-transform duration-300">
-            <div className="absolute top-4 right-4" onClick={handleToggleMenu}>
+            <div className="absolute top-4 right-4 cursor-pointer" onClick={handleToggleMenu}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -127,22 +127,22 @@ const Header: React.FC = () => {
             </div>
             <div className="flex items-center justify-center mb-10">
               <div className="logo flex flex-col items-center justify-center gap-2">
-                <div className="relative h-14 w-14 rounded-full overflow-hidden">
+                <div className="relative h-16 w-16 rounded-full overflow-hidden">
                   <Image
                     src={"/MukhtaSolutionsLogo.jpeg"}
                     fill
                     alt=""
-                    sizes="(max-width: 768px) 120px, (max-width: 1200px) 150px, 200px"
+                    // sizes="(max-width: 768px) 120px, (max-width: 1200px) 150px, 200px"
                   />
                 </div>
-                <h1 className="logo text-lg">Mukhta Travels</h1>
+                <h1 className="logo text-lg">Mukhta Solutions</h1>
               </div>
             </div>
             <ul className="flex flex-col items-center justify-center gap-4 text-white">
               {NavigationMenu.map((item, index) => {
                 return (
                   <li
-                    className="relative group"
+                    className="relative group cursor-pointer"
                     key={index}
                     onClick={() => handleNavigation(item.href)}
                   >
