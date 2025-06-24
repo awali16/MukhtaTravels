@@ -1,14 +1,16 @@
 // pages/about.js or components/AboutPage.jsx
 
 import React from "react";
+import {useTranslations} from 'next-intl';
 
 const AboutPage = () => {
+  const t = useTranslations();
   return (
     <div className="px-6 sm:px-10 lg:px-40 py-16 bg-white text-gray-800">
       <div className="max-w-4xl mx-auto">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-green-700 mb-6">
-            About Mukhta Solutions
+            {t("About Us")}
           </h1>
         </div>
 

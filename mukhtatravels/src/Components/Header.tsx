@@ -1,14 +1,18 @@
 "use client";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
+import {useTranslations} from 'next-intl';
 import Image from "next/image";
 import Link from "next/link";
 import { NavigationMenu } from "@/lib/constants";
 
 const Header: React.FC = () => {
+  const t = useTranslations();
   const router = useRouter();
   const pathname = usePathname();
+  const params = useParams();
+  const locale = typeof params?.locale === "string" ? params.locale : "en"; // fallback to 'en'
   const [showMenu, setShowMenu] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -30,11 +34,11 @@ const Header: React.FC = () => {
     <>
       <div className="h-8 bg-[#00a73e] text-white flex items-center justify-center gap-6 text-sm px-4">
         <a href="mailto:mukhtasolutions@gmail.com" className="hover:underline">
-          mukhtasolutions@gmail.com
+          {"mukhtasolutions@gmail.com"}
         </a>
         <span className="hidden sm:inline-block">|</span>
         <a href="tel:+917006062987" className="hover:underline">
-          +91 70060 62987
+          {"+91 70060 62987"}
         </a>
       </div>
 
@@ -46,12 +50,11 @@ const Header: React.FC = () => {
                 src={"/MukhtaSolutionsLogo.jpeg"}
                 alt=""
                 fill
-                // sizes="(max-width: 768px) 120px, (max-width: 1200px) 150px, 200px"
-                className="rounded-full "
+                className="rounded-full"
               />
             </div>
 
-            <h1 className="logo text-lg">Mukhta Solutions</h1>
+            <h1 className="logo text-lg">{t("Mukhta Solutions")}</h1>
           </Link>
         </div>
         <nav className="nav hidden lg:flex  items-center justify-center w-full">
@@ -60,7 +63,7 @@ const Header: React.FC = () => {
               return (
                 <Link href={item.href} key={index} className="relative group">
                   <li>
-                    {item.name}
+                    {t(item.name)}
                     <span
                       className={`absolute  -bottom-0.5  h-[2px] bg-white transition-all duration-300 ease-in-out  mt-2 ${
                         pathname === item.href
@@ -74,7 +77,6 @@ const Header: React.FC = () => {
             })}
           </ul>
         </nav>
-        {/* this div is a placeholder for alignment of the header items */}
         <div className="w-full hidden lg:inline-block"></div>
         {/* Hamburger Menu Icon for Mobile */}
         <div className="text-white  lg:hidden  cursor-pointer" onClick={handleToggleMenu}>
@@ -93,6 +95,7 @@ const Header: React.FC = () => {
             />
           </svg>
         </div>
+
         {/* Mobile Menu drawer */}
         <div
           className={`flex fixed top-0 right-0 h-screen w-full z-50 lg:hidden 
@@ -132,10 +135,9 @@ const Header: React.FC = () => {
                     src={"/MukhtaSolutionsLogo.jpeg"}
                     fill
                     alt=""
-                    // sizes="(max-width: 768px) 120px, (max-width: 1200px) 150px, 200px"
                   />
                 </div>
-                <h1 className="logo text-lg">Mukhta Solutions</h1>
+                <h1 className="logo text-lg">{t("Mukhta Solutions")}</h1>
               </div>
             </div>
             <ul className="flex flex-col items-center justify-center gap-4 text-white">
@@ -146,7 +148,7 @@ const Header: React.FC = () => {
                     key={index}
                     onClick={() => handleNavigation(item.href)}
                   >
-                    {item.name}
+                    {t(item.name)}
                     <span
                       className={`absolute  -bottom-0.5  h-[2px] bg-white transition-all duration-300 ease-in-out  mt-2 ${
                         pathname === item.href

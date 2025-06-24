@@ -1,3 +1,6 @@
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -20,21 +23,30 @@ export const metadata: Metadata = {
   description: "Number One Travel Agency in Kashmir",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    // notFound();
+    // console.log(`Locale ${locale} not found, redirecting to default locale.`);
+  }
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale? locale: "en"} suppressHydrationWarning>
       <head></head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        <Header />
-        {children}
-        <Footer />
-        <WhatsAppButton />
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+          <Footer />
+          <WhatsAppButton />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
