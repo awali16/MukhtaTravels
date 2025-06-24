@@ -4,20 +4,22 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import { NavigationMenu } from "@/lib/constants"; // Adjust the import path as necessary
+import { NavigationMenu } from "@/lib/constants"; 
+import { useTranslations } from "next-intl";// Adjust the import path as necessary
 
 const Footer: React.FC = () => {
+  const t= useTranslations(); // Use the correct namespace for translations
   const pathname = usePathname();
   return (
     <footer className="bg-gray-900 text-white pt-10 ">
       <div className=" px-8 sm:px-8 lg:px-44 grid grid-cols-1 md:grid-cols-3 pb-8 lg:pb-2 gap-8">
-        {/* <!-- Navigation Links --> */}
-        <div className="" >
-          <h3 className="text-xl font-semibold mb-4">Navigation</h3>
+        {/* Navigation Links */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">{t("Navigation")}</h3>
           <ul className="space-y-2">
             {/* Map through NavigationMenu items */}
             {NavigationMenu.map((item) => (
-              <li key={item.name} className="">
+              <li key={item.name}>
                 <Link
                   href={item.href}
                   className={`${
@@ -26,7 +28,7 @@ const Footer: React.FC = () => {
                       : "text-gray-400 hover:text-white"
                   } transition relative group`}
                 >
-                  {item.name}
+                  {t(item.name)}
                   <span
                     className={`absolute  -bottom-0.5  h-[2px] bg-white transition-all duration-300 ease-in-out  mt-2 ${
                       pathname === item.href
@@ -40,9 +42,9 @@ const Footer: React.FC = () => {
           </ul>
         </div>
 
-        {/* <!-- Social Media Links --> */}
-        <div className="">
-          <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
+        {/* Social Media Links */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">{t("Follow Us")}</h3>
           <div className="flex space-x-6 text-xl">
             <Link
               href="https://facebook.com"
@@ -71,29 +73,30 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* <!--Company Logos --> */}
+        {/* Company Logos */}
         <div className="w-64  text-center  flex flex-col items-start justify-start ">
           <div className="relative flex title-font font-medium items-center  justify-start  text-white-900 h-16 w-16 rounded-full overflow-hidden mb-6">
             <Image
               src={"/MukhtaSolutionsLogo.jpeg"}
               fill
-              alt="logo"
+              alt={t("logo")}
               className="object-cover"
             />
           </div>
-          <p className="text-xl">Mukhta Solutions</p>
+          <p className="text-xl">{t("Mukhta Solutions")}</p>
           <p className="mt-2 text-sm text-gray-500 ">
-            Your Gateway to Kashmir
+            {t("Your Gateway to Kashmir")}
           </p>
         </div>
-        {/* base footer  */}
+
+        {/* Base footer */}
         <div className=" flex flex-col md:flex-row items-center justify-start  col-span-1 md:col-span-3 mt-10 text-center text-gray-500 text-sm py-4 gap-4 lg:gap-0">
-          <div className="">
-            <p>© 2025 Mukhta Solutions, All rights reserved.</p>
+          <div>
+            <p>{t("© 2025 Mukhta Solutions, All rights reserved")}</p>
           </div>
           <div>
             <p>
-              &nbsp;Designed & Developed by{" "}
+              &nbsp;{t("Designed & Developed by")}{" "}
               <Link
                 href="https://asifwali.com"
                 target="_blank"
