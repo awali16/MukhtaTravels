@@ -5,8 +5,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import "./OurCustomerExperiences.css";
+import { useTranslations } from "next-intl";
 
 export default function OurCustomerExperiences() {
+  const t= useTranslations();
   const settings = {
     // dots: true,
     // dotsClass: "slick-dots custom-dots", // 👈 to apply our custom styling
@@ -77,7 +79,7 @@ export default function OurCustomerExperiences() {
   return (
     <section className="py-12 px-4 sm:px-8 md:px-16 lg:px-24 bg-gray-50 overflow-x-none">
       <h2 className="xl:text-4xl lg:text-3xl text-2xl font-bold text-center text-[#00a73e] mb-10">
-        Our Customer Experiences
+        {t("Our Guests")}
       </h2>
 
       <Slider {...settings}>

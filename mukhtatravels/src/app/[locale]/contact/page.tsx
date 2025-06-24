@@ -1,20 +1,22 @@
 // pages/contact.js or components/ContactPage.jsx
 
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const ContactPage = () => {
+  const t = useTranslations();
   return (
-    <div className="bg-white px-6 sm:px-10 lg:px-40 py-16 text-gray-800">
+     <div className="bg-white px-6 sm:px-10 lg:px-40 py-16 text-gray-800">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold text-green-700 mb-6">
-            Contact Us
+            {t("Contact Us")}
           </h1>
           <p className="text-lg text-gray-600">
-            We’d love to hear from you! Whether you’re planning your dream trip
-            to Kashmir or simply have questions about our services, the team at
-            Mukhta Solutions is here to assist you.
+            {t(
+              "We’d love to hear from you! Whether you’re planning your dream trip to Kashmir or simply have questions about our services, the team at Mukhta Solutions is here to assist you"
+            )}
           </p>
         </div>
 
@@ -22,10 +24,11 @@ const ContactPage = () => {
         <div className="bg-gray-50 rounded-lg shadow-md p-6 space-y-6">
           <div>
             <h2 className="text-2xl font-semibold text-green-700 mb-2">
-              Get in Touch
+              {t("Get in Touch")}
             </h2>
             <ul className="space-y-2 text-lg text-gray-700">
               <li className="flex items-center gap-2">
+                {/* Email icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -41,7 +44,7 @@ const ContactPage = () => {
                   />
                 </svg>
                 <strong className="hidden md:inline-block lg:inline-block">
-                  Email:
+                  {t("Email:")}
                 </strong>{" "}
                 <a
                   href="mailto:mukhtasolutions@gmail.com"
@@ -51,6 +54,7 @@ const ContactPage = () => {
                 </a>
               </li>
               <li className="flex items-center gap-2">
+                {/* Phone icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -66,16 +70,17 @@ const ContactPage = () => {
                   />
                 </svg>
                 <strong className="hidden md:inline-block lg:inline-block">
-                  Phone/WhatsApp:
+                  {t("Phone/WhatsApp:")}
                 </strong>{" "}
                 <a
                   href="tel:+917006062987"
                   className="text-green-700 hover:underline"
                 >
-                  +91 70060 62987
+                  {t("+91 70060 62987")}
                 </a>
               </li>
               <li className="flex items-center gap-2">
+                {/* Location icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -96,7 +101,7 @@ const ContactPage = () => {
                   />
                 </svg>
                 <strong className="hidden md:inline-block lg:inline-block">
-                  Location:
+                  {t("Location:")}
                 </strong>{" "}
                 <a
                   href="https://www.google.com/maps?q=34.1494,74.8707"
@@ -104,15 +109,16 @@ const ContactPage = () => {
                   rel="noopener noreferrer"
                   className="text-green-700 hover:underline"
                 >
-                  Tailbal Road, Shalimar, J&amp;K, India
+                  {t("Tailbal Road, Shalimar, J&K, India")}
                 </a>
               </li>
             </ul>
           </div>
 
           <p className="text-lg text-gray-600">
-            Feel free to call, message, or email us — we’re ready to help you
-            start your unforgettable journey!
+            {t(
+              "Feel free to call, message, or email us — we’re ready to help you start your unforgettable journey!"
+            )}
           </p>
         </div>
       </div>

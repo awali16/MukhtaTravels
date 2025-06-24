@@ -1,7 +1,7 @@
 // pages/about.js or components/AboutPage.jsx
 
 import React from "react";
-import {useTranslations} from 'next-intl';
+import { useTranslations } from "next-intl";
 
 const AboutPage = () => {
   const t = useTranslations();
@@ -15,31 +15,36 @@ const AboutPage = () => {
         </div>
 
         <p className="text-lg mb-4">
-          Welcome to <strong>Mukhta Solutions</strong> — your trusted travel
-          partner in the breathtaking land of Kashmir. We are a registered
-          travel agency under the Jammu & Kashmir Tourism Department, committed
-          to offering safe, reliable, and memorable travel experiences across
-          the valley.
+          {t(
+            "Welcome to Mukhta Solutions — your trusted travel partner in the breathtaking land of Kashmir"
+          )}{" "}
+          {t(
+            "We are a registered travel agency under the Jammu & Kashmir Tourism Department, committed to offering safe, reliable, and memorable travel experiences across the valley"
+          )}
         </p>
 
         <p className="text-lg mb-4">
-          At Mukhta Solutions, we specialize in customized tours, hotel
-          bookings, transport services, adventure activities, and complete
-          travel solutions tailored to your needs. With our deep local knowledge
-          and passion for hospitality, we aim to showcase the real beauty,
-          culture, and warmth of Kashmir to travelers from all over the world.
+          {t(
+            "At Mukhta Solutions, we specialize in customized tours, hotel bookings, transport services, adventure activities, and complete travel solutions tailored to your needs"
+          )}{" "}
+          {t(
+            "With our deep local knowledge and passion for hospitality, we aim to showcase the real beauty, culture, and warmth of Kashmir to travelers from all over the world"
+          )}
         </p>
 
         <p className="text-lg mb-4">
-          Our team ensures every journey is well-planned, comfortable, and
-          unforgettable. Whether you’re seeking a relaxing holiday, a honeymoon
-          retreat, or a thrilling adventure, Mukhta Solutions is here to turn
-          your travel dreams into reality.
+          {t(
+            "Our team ensures every journey is well-planned, comfortable, and unforgettable"
+          )}{" "}
+          {t(
+            "Whether you’re seeking a relaxing holiday, a honeymoon retreat, or a thrilling adventure, Mukhta Solutions is here to turn your travel dreams into reality"
+          )}
         </p>
 
-        <p className="text-lg mt-6 italic text-green-800 font-medium">
-          Discover the magic of Kashmir with Mukhta Solutions — where every trip
-          becomes a beautiful story.
+        <p className="text-xl mt-6 italic text-green-800 font-bold">
+          {t(
+            "Discover the magic of Kashmir with Mukhta Solutions — where every trip becomes a beautiful story"
+          )}
         </p>
       </div>
     </div>

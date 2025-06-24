@@ -13,31 +13,84 @@
   "Mukhta Solutions — Your Gateway to Kashmir": "Mukhta Solutions — Your Gateway to Kashmir",
   "At Mukhta Solutions, we offer a wide range of travel services designed to make your trip to Kashmir smooth, enjoyable, and unforgettable": "At Mukhta Solutions, we offer a wide range of travel services designed to make your trip to Kashmir smooth, enjoyable, and unforgettable.",
   "Our services include": "Our services include:",
-  
+
   "Customized Tour Packages": "Customized Tour Packages",
   "Tailor-made travel experiences based on your interests, budget, and schedule, whether for leisure, adventure, family trips, or honeymoons": "Tailor-made travel experiences based on your interests, budget, and schedule, whether for leisure, adventure, family trips, or honeymoons.",
-  
+
   "Hotel and Houseboat Bookings": "Hotel and Houseboat Bookings",
   "Comfortable stays in premium hotels, cozy guesthouses, and traditional houseboats across Kashmir": "Comfortable stays in premium hotels, cozy guesthouses, and traditional houseboats across Kashmir.",
-  
+
   "Transportation Services": "Transportation Services",
   "Private cars, SUVs, tempo travelers, and luxury vehicles with professional drivers to ensure safe and hassle-free travel": "Private cars, SUVs, tempo travelers, and luxury vehicles with professional drivers to ensure safe and hassle-free travel.",
-  
+
   "Sightseeing Tours": "Sightseeing Tours",
   "Guided tours to iconic destinations like Srinagar, Gulmarg, Pahalgam, Sonamarg, and many more hidden gems of Kashmir": "Guided tours to iconic destinations like Srinagar, Gulmarg, Pahalgam, Sonamarg, and many more hidden gems of Kashmir.",
-  
+
   "Adventure Activities": "Adventure Activities",
   "Trekking, skiing, river rafting, camping, paragliding, and other thrilling experiences for adventure seekers": "Trekking, skiing, river rafting, camping, paragliding, and other thrilling experiences for adventure seekers.",
-  
+
   "Corporate and Group Travel": "Corporate and Group Travel",
   "Special arrangements for corporate tours, educational trips, and group travel with customized itineraries": "Special arrangements for corporate tours, educational trips, and group travel with customized itineraries.",
-  
+
   "Airport Transfers": "Airport Transfers",
   "Reliable pick-up and drop-off services from Srinagar Airport for a smooth start and end to your journey": "Reliable pick-up and drop-off services from Srinagar Airport for a smooth start and end to your journey.",
-  
-  "24/7 Customer Support": "24/7 Customer Support",
-  "Dedicated assistance throughout your trip to ensure a worry-free travel experience": "Dedicated assistance throughout your trip to ensure a worry-free travel experience."
 
+  "24/7 Customer Support": "24/7 Customer Support",
+  "Dedicated assistance throughout your trip to ensure a worry-free travel experience": "Dedicated assistance throughout your trip to ensure a worry-free travel experience.",
+
+  "Contact Us": "Contact Us",
+  "We’d love to hear from you! Whether you’re planning your dream trip to Kashmir or simply have questions about our services, the team at Mukhta Solutions is here to assist you": "We’d love to hear from you! Whether you’re planning your dream trip to Kashmir or simply have questions about our services, the team at Mukhta Solutions is here to assist you.",
+  "Get in Touch": "Get in Touch",
+  "Email:": "Email:",
+  "Phone/WhatsApp:": "Phone/WhatsApp:",
+  "Location:": "Location:",
+  "Tailbal Road, Shalimar, J&K, India": "Tailbal Road, Shalimar, J&K, India",
+  "Feel free to call, message, or email us — we’re ready to help you start your unforgettable journey!": "Feel free to call, message, or email us — we’re ready to help you start your unforgettable journey!",
+
+  "About Us": "About Us",
+  "Welcome to Mukhta Solutions — your trusted travel partner in the breathtaking land of Kashmir": "Welcome to Mukhta Solutions — your trusted travel partner in the breathtaking land of Kashmir.",
+  "We are a registered travel agency under the Jammu & Kashmir Tourism Department, committed to offering safe, reliable, and memorable travel experiences across the valley": "We are a registered travel agency under the Jammu & Kashmir Tourism Department, committed to offering safe, reliable, and memorable travel experiences across the valley.",
+  "At Mukhta Solutions, we specialize in customized tours, hotel bookings, transport services, adventure activities, and complete travel solutions tailored to your needs": "At Mukhta Solutions, we specialize in customized tours, hotel bookings, transport services, adventure activities, and complete travel solutions tailored to your needs.",
+  "With our deep local knowledge and passion for hospitality, we aim to showcase the real beauty, culture, and warmth of Kashmir to travelers from all over the world": "With our deep local knowledge and passion for hospitality, we aim to showcase the real beauty, culture, and warmth of Kashmir to travelers from all over the world.",
+  "Our team ensures every journey is well-planned, comfortable, and unforgettable": "Our team ensures every journey is well-planned, comfortable, and unforgettable.",
+  "Whether you’re seeking a relaxing holiday, a honeymoon retreat, or a thrilling adventure, Mukhta Solutions is here to turn your travel dreams into reality": "Whether you’re seeking a relaxing holiday, a honeymoon retreat, or a thrilling adventure, Mukhta Solutions is here to turn your travel dreams into reality.",
+  "Discover the magic of Kashmir with Mukhta Solutions — where every trip becomes a beautiful story": "Discover the magic of Kashmir with Mukhta Solutions — where every trip becomes a beautiful story.",
+
+  "Book Your Tour": "Book Your Tour",
+  "Name": "Name",
+  "Enter your name": "Enter your name",
+  "Name is required": "Name is required",
+  "Name should be at least 2 characters": "Name should be at least 2 characters",
+  "Email": "Email",
+  "Enter your email": "Enter your email",
+  "Email is required": "Email is required",
+  "Invalid email format": "Invalid email format",
+  "Phone Number": "Phone Number",
+  "Enter your phone number": "Enter your phone number",
+  "Number of Persons": "Number of Persons",
+  "Enter number of persons": "Enter number of persons",
+  "Please enter number of adults": "Please enter number of adults",
+  "At least 1 person is required": "At least 1 person is required",
+  "From Date": "From Date",
+  "Please select a start date": "Please select a start date",
+  "Start date cannot be in the past": "Start date cannot be in the past",
+  "Select start date": "Select start date",
+  "To Date": "To Date",
+  "Please select an end date": "Please select an end date",
+  "End date cannot be before start date": "End date cannot be before start date",
+  "Select end date": "Select end date",
+  "Submit": "Submit",
+  "Our Guests": "Our Guests",
+  "Our Packages": "Our Packages",
+
+  "Welcome to Mukhta Solutions": "Welcome to Mukhta Solutions",
+  "Your Gateway to Kashmir": "Your Gateway to Kashmir",
+  "We are a trusted travel agency registered with the Jammu & Kashmir Tourism Department": "We are a trusted travel agency registered with the Jammu & Kashmir Tourism Department.",
+  "We are committed to offering you safe, reliable, and unforgettable travel experiences across the beautiful valley of Kashmir": "We are committed to offering you safe, reliable, and unforgettable travel experiences across the beautiful valley of Kashmir.",
+  
+  "Default WhatsApp message": "Default WhatsApp message",
+  "Click to chat on WhatsApp": "Click to chat on WhatsApp",
+  "WhatsApp chat icon": "WhatsApp chat icon"
 
 
 }

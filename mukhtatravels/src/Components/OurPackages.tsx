@@ -5,8 +5,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import "./OurCustomerExperiences.css";
+import { useTranslations } from "next-intl";
 
 const OurPackages: React.FC = () => {
+  const t = useTranslations();
   const settings = {
     dots: true,
     dotsClass: "slick-dots custom-dots",
@@ -16,7 +18,7 @@ const OurPackages: React.FC = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    arrows:false,
+    arrows: false,
     responsive: [
       {
         breakpoint: 768,
@@ -30,7 +32,7 @@ const OurPackages: React.FC = () => {
   return (
     <section className="py-12 px-4 sm:px-8 md:px-16 lg:px-24 bg-gray-50 overflow-x-none">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#00a73e] mb-10">
-        Our Packages
+        {t("Our Packages")}
       </h2>
 
       <Slider {...settings}>
