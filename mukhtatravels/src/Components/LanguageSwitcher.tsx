@@ -22,7 +22,10 @@ export default function LanguageSwitcher() {
   };
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
       setLangDropdown(false);
     }
   };
@@ -37,25 +40,26 @@ export default function LanguageSwitcher() {
   const currentLang = locales.find((l) => l.code === currentLocale);
 
   return (
-    <li ref={dropdownRef} className="relative border-2 border-[red] flex flex-col items-end">
+    <li ref={dropdownRef} className="relative flex flex-col items-end">
       <button
         onClick={() => setLangDropdown((prev) => !prev)}
-        className="flex items-center gap-2 px-4 py-2 border rounded hover:bg-gray-100"
+        className="cursor-pointer flex items-center gap-2 px-4 py-2 bg-blue-500 border rounded hover:bg-[#00a73e]"
       >
         <span className={`fi fi-${currentLang?.flag}`} />
-        <span>{currentLang?.label}</span>
+        {/* <span>{currentLang?.label}</span> */}
       </button>
 
       {langDropdown && (
-        <ul className="absolute right-0 z-50 mt-2 w-40 bg-blue-600 border border-[red] rounded shadow-lg">
+        <ul className="absolute -right-1 top-8 z-50 mt-2 w-40 bg-blue-500 rounded shadow-lg border border-[#00a73e]">
           {locales.map(({ code, label, flag }) => (
             <li key={code}>
               <button
                 onClick={() => handleLanguageChange(code)}
-                className="flex w-full items-center gap-2 px-4 py-2 hover:bg-gray-100"
+                className="flex w-full items-center gap-2 px-4 py-2 hover:bg-[#00a73e]"
               >
                 <span className={`fi fi-${flag}`} />
                 <span>{label}</span>
+                <span className="uppercase text-xs">{`(${flag})`}</span>
               </button>
             </li>
           ))}

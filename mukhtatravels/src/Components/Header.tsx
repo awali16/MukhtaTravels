@@ -1,12 +1,13 @@
 "use client";
 import React, { useEffect } from "react";
+import Marquee from "react-fast-marquee";
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import {useTranslations} from 'next-intl';
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { NavigationMenu } from "@/lib/constants";
-import LanguageSwitcher from "./LanguageSwitcher"; 
+import LanguageSwitcher from "./LanguageSwitcher";
 // Adjust the import path as necessary
 
 const Header: React.FC = () => {
@@ -34,15 +35,20 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <div className="h-8 bg-[#00a73e] text-white flex items-center justify-center gap-6 text-sm px-4">
-        <a href="mailto:mukhtasolutions@gmail.com" className="hover:underline">
-          {"mukhtasolutions@gmail.com"}
-        </a>
-        <span className="hidden sm:inline-block">|</span>
-        <a href="tel:+917006062987" className="hover:underline">
-          {"+91 70060 62987"}
-        </a>
-      </div>
+      <Marquee pauseOnHover={true} speed={25}  className="bg-[#00a73e] text-white">
+        <div className="h-8 w-full bg-[#00a73e] text-white flex items-center justify-center gap-6 text-sm px-4">
+          <a
+            href="mailto:mukhtasolutions@gmail.com"
+            className="hover:underline"
+          >
+            {"mukhtasolutions@gmail.com"}
+          </a>
+          <span className="hidden sm:inline-block">|</span>
+          <a href="tel:+917006062987" className="hover:underline">
+            {"+91 70060 62987"}
+          </a>
+        </div>
+      </Marquee>
 
       <header className="header  flex items-center lg:justify-center justify-between w-full h-20 lg:pl-10 px-4 bg-blue-500 text-white relative overflow-x-none">
         <div className="logo flex items-center w-full gap-2">
@@ -79,13 +85,16 @@ const Header: React.FC = () => {
             })}
           </ul>
         </nav>
-        
+
         <div className="w-full hidden lg:inline-block"></div>
         {/* Hamburger Menu Icon for Mobile */}
         <div>
           <LanguageSwitcher />
         </div>
-        <div className="text-white  lg:hidden  cursor-pointer" onClick={handleToggleMenu}>
+        <div
+          className="text-white  lg:hidden  cursor-pointer"
+          onClick={handleToggleMenu}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -118,7 +127,10 @@ const Header: React.FC = () => {
           ></div>
 
           <div className="relative h-full w-[65%] bg-green-600 opacity-100 ml-auto py-16 px-4 transition-transform duration-300">
-            <div className="absolute top-4 right-4 cursor-pointer" onClick={handleToggleMenu}>
+            <div
+              className="absolute top-4 right-4 cursor-pointer"
+              onClick={handleToggleMenu}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -137,11 +149,7 @@ const Header: React.FC = () => {
             <div className="flex items-center justify-center mb-10">
               <div className="logo flex flex-col items-center justify-center gap-2">
                 <div className="relative h-16 w-16 rounded-full overflow-hidden">
-                  <Image
-                    src={"/MukhtaSolutionsLogo.jpeg"}
-                    fill
-                    alt=""
-                  />
+                  <Image src={"/MukhtaSolutionsLogo.jpeg"} fill alt="" />
                 </div>
                 <h1 className="logo text-lg">{t("Mukhta Solutions")}</h1>
               </div>
