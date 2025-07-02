@@ -51,7 +51,7 @@ const Header: React.FC = () => {
       </Marquee>
 
       <header className="header  flex items-center lg:justify-center justify-between w-full h-20 lg:pl-10 px-4 bg-blue-500 text-white relative overflow-x-none">
-        <div className="logo flex items-center w-full gap-2">
+        <div className="logo flex items-center w-full gap-2 ">
           <Link href="/" className="flex items-center gap-2">
             <div className="relative h-14 w-14 rounded-full overflow-hidden">
               <Image
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
             <h1 className="logo text-lg">{t("Mukhta Solutions")}</h1>
           </Link>
         </div>
-        <nav className="nav hidden lg:flex  items-center justify-center w-full">
+        <nav className="nav hidden lg:flex  items-center justify-center w-full ">
           <ul className="flex items-center justify-start gap-8">
             {NavigationMenu.map((item, index) => {
               return (
@@ -86,9 +86,8 @@ const Header: React.FC = () => {
           </ul>
         </nav>
 
-        <div className="w-full hidden lg:inline-block"></div>
         {/* Hamburger Menu Icon for Mobile */}
-        <div>
+        <div className="w-full">
           <LanguageSwitcher />
         </div>
         <div
