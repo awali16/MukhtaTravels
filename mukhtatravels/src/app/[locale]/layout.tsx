@@ -1,11 +1,11 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-// import { notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Header from "../Components/Header";
-import WhatsAppButton from "../Components/WhatsAppButton";
+import "../globals.css";
+import Header from "../../Components/Header";
+import WhatsAppButton from "../../Components/WhatsAppButton";
 import Footer from "@/Components/Footer";
 
 const geistSans = Geist({
@@ -30,13 +30,15 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>) {
-  const { locale } = await params;
+  console.log("RootLayout params:", params)
+  const { locale } =  await params;
   if (!hasLocale(routing.locales, locale)) {
-    // notFound();
-    // console.log(`Locale ${locale} not found, redirecting to default locale.`);
+    console.log(`Locale ${locale} not found, redirecting to default locale.`);
+    notFound();
   }
+  
   return (
-    <html lang={locale? locale: "en"} suppressHydrationWarning>
+    <html lang={locale? locale: "ur"} suppressHydrationWarning>
       <head></head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}

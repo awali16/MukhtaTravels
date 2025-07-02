@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import { RxGlobe } from "react-icons/rx";
-import { IoIosArrowDropdown } from "react-icons/io";
 
 const locales = [
   { code: "en", label: "English", flag: "us", visibleName: "en" },
@@ -81,7 +80,7 @@ export default function LanguageSwitcher() {
 
       {langDropdown && (
         <ul className="absolute -right-.5 top-8.5 z-50 mt-2 w-fit bg-blue-500 rounded shadow-lg border border-[#00a73e]">
-          {locales.map(({ code, label, flag }) => (
+          {locales.map(({ code, label }) => (
             <li key={code}>
               <button
                 onClick={() => handleLanguageChange(code)}

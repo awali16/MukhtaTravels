@@ -2,7 +2,7 @@
 export default function Loading() {
   return (
     <section className="bg-blue-900">
-      <div className="h-[calc(100vh-7rem)]  flex items-center justify-center px-4 mx-auto">
+      <div className="h-[100dvh] flex items-center justify-center px-4 mx-auto">
         <div className="flex flex-wrap items-center gap-4">
           <div>
             <svg
