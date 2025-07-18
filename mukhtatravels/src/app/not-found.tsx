@@ -4,17 +4,19 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import "./globals.css";
 // import Header from "@/Components/Header";
-// import {useTranslations} from 'next-intl';
+import {useTranslations} from 'next-intl';
 export default function NotFound() {
   const router = useRouter();
-  // const t = useTranslations();
-    const t = (value: string) => {
-    return value;
-  };
+  const t = useTranslations();
+
+  //   const t = (value: string) => {
+  //   return value;
+  // };
+  
   return (
     <>
     {/* <Header/> */}
-    <section className="bg-blue-900 h-[100dvh] py-72 overflow-x-none">
+    <section className="bg-red-900 h-[100dvh] py-72 overflow-x-none">
       <div className="mx-auto">
         <div className="flex">
           <div className="w-full px-4">
