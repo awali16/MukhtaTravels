@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Marquee from "react-fast-marquee";
 import { useState } from "react";
-import { useParams, usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,10 +17,10 @@ const Header: React.FC<HeaderProps> = ({ dir }) => {
   const router = useRouter();
   const pathname = usePathname();
   const cleanPath = pathname.replace(/^\/(en|ur)/, "") || "/";
-  const params = useParams();
-  const locale = typeof params?.locale === "string" ? params.locale : "en"; // fallback to 'en'
+  // const params = useParams();
+  // const locale = typeof params?.locale === "string" ? params.locale : "en"; // fallback to 'en'
   const [showMenu, setShowMenu] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
 
   const handleToggleMenu = () => {
     setShowMenu((prev) => !prev);

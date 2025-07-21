@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Your Gateway to Kashmir",
 };
 
-export default async function RootLayout({
+export default  function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
