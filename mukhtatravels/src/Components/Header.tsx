@@ -2,20 +2,23 @@
 import React, { useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { NavigationMenu } from "@/lib/constants";
 import LanguageSwitcher from "./LanguageSwitcher";
 // Adjust the import path as necessary
-
-const Header: React.FC = () => {
+type HeaderProps = {
+  dir: "ltr" | "rtl";
+};
+const Header: React.FC<HeaderProps> = ({ dir }) => {
   const t = useTranslations();
   const router = useRouter();
   const pathname = usePathname();
-  // const params = useParams();
-  // const locale = typeof params?.locale === "string" ? params.locale : "en"; // fallback to 'en'
+  const cleanPath = pathname.replace(/^\/(en|ur)/, "") || "/";
+  const params = useParams();
+  const locale = typeof params?.locale === "string" ? params.locale : "en"; // fallback to 'en'
   const [showMenu, setShowMenu] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -27,15 +30,19 @@ const Header: React.FC = () => {
     setShowMenu(false);
   };
 
-  useEffect(() => {
-    setMounted(true);
-  }, [pathname]);
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, [pathname]);
 
-  if (!mounted) return null;
+  // if (!mounted) return null;
 
   return (
     <>
-      <Marquee pauseOnHover={true} speed={25}  className="bg-[#00a73e] text-white">
+      <Marquee
+        pauseOnHover={true}
+        speed={25}
+        className="bg-[#00a73e] text-white"
+      >
         <div className="h-8 w-full bg-[#00a73e] text-white flex items-center justify-center gap-6 text-sm px-4">
           <a
             href="mailto:mukhtasolutions@gmail.com"
@@ -51,7 +58,7 @@ const Header: React.FC = () => {
       </Marquee>
 
       <header className="header  flex items-center lg:justify-center justify-between w-full h-20 lg:pl-10 px-4 bg-blue-500 text-white relative overflow-x-none">
-        <div className="logo flex items-center w-full gap-2 ">
+        <div className="logo flex items-center w-full gap-2">
           <Link href="/" className="flex items-center gap-2">
             <div className="relative h-14 w-14 rounded-full overflow-hidden">
               <Image
@@ -65,7 +72,7 @@ const Header: React.FC = () => {
             <h1 className="logo text-lg">{t("Mukhta Solutions")}</h1>
           </Link>
         </div>
-        <nav className="nav hidden lg:flex  items-center justify-center w-full ">
+        <nav className="nav hidden lg:flex  items-center justify-center w-full">
           <ul className="flex items-center justify-start gap-8">
             {NavigationMenu.map((item, index) => {
               return (
@@ -74,7 +81,7 @@ const Header: React.FC = () => {
                     {t(item.name)}
                     <span
                       className={`absolute  -bottom-0.5  h-[2px] bg-white transition-all duration-300 ease-in-out  mt-2 ${
-                        pathname === item.href
+                        cleanPath === item.href
                           ? "w-full left-0"
                           : "left-1/2 w-0 group-hover:w-full group-hover:left-0"
                       }`}
@@ -87,7 +94,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Hamburger Menu Icon for Mobile */}
-        <div className="w-full">
+        <div className="w-fit lg:w-full">
           <LanguageSwitcher />
         </div>
         <div
@@ -112,9 +119,17 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu drawer */}
         <div
-          className={`flex fixed top-0 right-0 h-screen w-full z-50 lg:hidden 
+          className={`flex fixed top-0 ${
+            dir === "rtl" ? "left-0" : "right-0"
+          } h-screen w-full z-50 lg:hidden
             transition-transform duration-500
-            ${showMenu ? "translate-x-0" : "translate-x-full"}`}
+          ${
+            showMenu
+              ? "translate-x-0"
+              : dir === "rtl"
+              ? "-translate-x-full"
+              : "translate-x-full"
+          }`}
         >
           <div
             className={`h-full w-[35%] ${
@@ -164,7 +179,7 @@ const Header: React.FC = () => {
                     {t(item.name)}
                     <span
                       className={`absolute  -bottom-0.5  h-[2px] bg-white transition-all duration-300 ease-in-out  mt-2 ${
-                        pathname === item.href
+                        cleanPath === item.href
                           ? "w-full left-0"
                           : "left-1/2 w-0 group-hover:w-full group-hover:left-0"
                       }`}

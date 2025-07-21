@@ -18,6 +18,11 @@ export default function LanguageSwitcher() {
   const pathWithoutLocale = pathname.replace(/^\/(en|ur)/, "") || "/";
 
   const handleLanguageChange = (code: string) => {
+    if (code === currentLocale) {
+      setLangDropdown(false);
+      return; // No need to reload if it's the same language
+    }
+
     setLangDropdown(false);
     window.location.href = `/${code}${pathWithoutLocale}`;
   };
@@ -87,7 +92,7 @@ export default function LanguageSwitcher() {
                 className="flex w-full items-center  gap-2 px-4 py-2 hover:bg-[#00a73e]"
               >
                 {/* <span className={`fi fi-${flag}`} /> */}
-                
+
                 <span>{label}</span>
                 {/* <span className="uppercase text-xs">{`(${flag})`}</span> */}
               </button>

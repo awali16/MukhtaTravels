@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import "./globals.css";
+import "../globals.css";
 // import Header from "@/Components/Header";
 import { useTranslations } from "next-intl";
 export default function NotFound() {
@@ -12,6 +12,7 @@ export default function NotFound() {
   //   const t = (value: string) => {
   //   return value;
   // };
+
   return (
     <>
       {/* <Header/> */}
