@@ -17,10 +17,8 @@ const Header: React.FC<HeaderProps> = ({ dir }) => {
   const router = useRouter();
   const pathname = usePathname();
   const cleanPath = pathname.replace(/^\/(en|ur)/, "") || "/";
-  // const params = useParams();
-  // const locale = typeof params?.locale === "string" ? params.locale : "en"; // fallback to 'en'
+ 
   const [showMenu, setShowMenu] = useState(false);
-  // const [mounted, setMounted] = useState(false);
 
   const handleToggleMenu = () => {
     setShowMenu((prev) => !prev);

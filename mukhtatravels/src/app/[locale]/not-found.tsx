@@ -16,7 +16,7 @@ export default function NotFound() {
   return (
     <>
       {/* <Header/> */}
-      <section className="bg-blue-900 h-[100dvh] py-72 overflow-x-none">
+      <section className="bg-red-900 h-[100dvh] py-72 overflow-x-none">
         <div className="mx-auto">
           <div className="flex">
             <div className="w-full px-4">
