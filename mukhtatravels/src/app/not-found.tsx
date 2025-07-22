@@ -2,8 +2,8 @@
 import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/navigation";
-import Header from "@/Components/Header";
-import Footer from "@/Components/Footer";
+// import Header from "@/Components/Header";
+// import Footer from "@/Components/Footer";
 
 export default function NotFound() {
   const router = useRouter();
