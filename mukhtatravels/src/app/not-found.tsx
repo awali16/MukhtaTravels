@@ -8,7 +8,6 @@ import Image from "next/image";
 
 export default function NotFound() {
   const router = useRouter();
-  const t = (key: string) => key; // Fallback to key if messages are not available
 
   return (
     <>
